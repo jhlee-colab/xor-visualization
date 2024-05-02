@@ -1,0 +1,5 @@
+__pycache__
+.python-version
+*.png
+*.bk
+.DS_Store
