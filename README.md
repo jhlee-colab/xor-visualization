@@ -7,10 +7,11 @@
 ### Arguments
 - hidden_layers: the hidden layers, default [2]
 - activation: the type of a activation function, default sigmoid
-  - sigmoid
-  - tanh
-  - softplus
-  - silu
+  - Sigmoid
+  - ReLU
+  - Tanh
+  - Softplus
+  - SiLU
 - optimizer: optimizer function, default Adam
   - SGD
   - Adam
