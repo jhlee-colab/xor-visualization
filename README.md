@@ -1,3 +1,8 @@
+### Requirements
+- torch
+- matplotlib
+- sympy
+- numpy
 
 ### Arguments
 - hidden_layers: the hidden layers, default [2]
