@@ -1,8 +1,9 @@
 import torch
 import argparse
 import sys
+from sympy import symbols, Matrix
 from xor.models import XOR
-from xor.polynomials import sigmoid, tanh, softplus, silu
+from xor.polynomials import sigmoid, tanh, softplus, silu, relu, layer_output
 from xor.plots import surface_plot, surface_plot_sym
 from xor.constants import *
 
@@ -69,6 +70,26 @@ def check_args(args):
         print(f'epochs is set to default value, {args.epochs}.')
     return args
 
+def get_output_equation(model, act_fn):
+    # get linear layers
+    layers = [x for x in [module for module in model.modules() if not isinstance(module, torch.nn.Sequential)] if isinstance(x, torch.nn.Linear)]
+
+    # input symbols
+    x1, x2 = symbols('x1, x2')
+    X_sym = Matrix([[x1, x2]])
+
+    output_eq = X_sym
+    # hidden layer
+    for layer in layers[:-1]:
+        weights = layer.weight.detach().numpy()
+        bias = layer.bias.detach().numpy().reshape(1, -1)
+        output_eq = layer_output(output_eq, weights, bias)
+        output_eq = act_fn(output_eq)
+
+    # output layer
+    output_eq = layer_output(output_eq, layers[-1].weight.detach().numpy(), layers[-1].bias.detach().numpy())
+    return output_eq[0] 
+
 def main(args):
     print('-'*20)
     print(f'arguments: {args}')
@@ -97,10 +118,15 @@ def main(args):
         act_fn = softplus
     elif args.activation == 'SiLU':
         act_fn = silu
+    elif args.activation == 'ReLU':
+        act_fn = relu
 
+    print('\nThe output equation')
+    print('-'*100)
+    print(f'{get_output_equation(xor_model, act_fn)}')
     # plot surface
 #    surface_plot_sym(xor_model, act_fn, fname=args.save_filename)
-    surface_plot(xor_model, fname=args.save_filename)
+    surface_plot(xor_model, fname=args.save_filename, title='The output surface for XOR', cmap='coolwarm', alpha=0.8)
 
 
 
