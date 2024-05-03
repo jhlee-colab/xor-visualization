@@ -31,9 +31,12 @@
 ```shell
 python visualize_xor.py \
 --hidden_layer "[4, 3, 2]" \
---activation sigmoid \
---optimizer adam \
+--activation relu \
+--optimizer nadam \
 --loss bce \
 --learning_rate 0.01 \
---epochs 10000
+--epochs 2000
+--save_filename 'xor_output.png'
 ```
+![xor_output](https://github.com/jhlee-colab/xor-visualization/assets/158408101/cdc94cf2-bc8b-46a1-a896-4eefca08e6f3)
+
