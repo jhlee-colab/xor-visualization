@@ -79,7 +79,7 @@
 - Linear: linear
 
 <figure>
-<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/c0640ede-e7c5-49a3-bad1-4e585b71c8fc" alt="drawing"/>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/c0640ede-e7c5-49a3-bad1-4e585b71c8fc" alt="drawing" width="500" height="350"/>
 <figcaption>Fig 7. Activation Functions</figcaption>
 </figure>
 
