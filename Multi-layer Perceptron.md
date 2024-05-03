@@ -1,1 +1,0 @@
-# XOR problems in Perceptron
