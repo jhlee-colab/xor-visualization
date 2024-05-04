@@ -124,16 +124,16 @@
   - $\Huge{h_1=\frac{1}{1+e^{-(w_1x_1+w_2x_2+b_1)}}}$
     
 <figure>
-<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/9448572d-289c-4d76-b126-c28a2a338f5b" alt="drawing" width="400" height="200"/>
-<figcaption>Fig 11. Hidden Layer, $h_1$ </figcaption>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/9448572d-289c-4d76-b126-c28a2a338f5b" alt="drawing" width="300" height="200"/>
+<figcaption>Fig 11. Hidden Layer, h1 </figcaption>
 </figure>
 
 - $h_2$ is a perceptron. Therefore, its equation is same as above perceptron equation.
   - $\Huge{h_2=\frac{1}{1+e^{-(w_3x_1+w_4x_2+b_2)}}}$
 
 <figure>
-<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/215b9864-8aaf-44ec-ad9b-7d09c10a7cef" alt="drawing" width="400" height="200"/>
-<figcaption>Fig 12. Hidden Layer, $h_2$ </figcaption>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/215b9864-8aaf-44ec-ad9b-7d09c10a7cef" alt="drawing" width="300" height="200"/>
+<figcaption>Fig 12. Hidden Layer, h2 </figcaption>
 </figure>
 
 ### Output Layer
