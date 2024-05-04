@@ -106,7 +106,37 @@
 
 ## XOR with MLP
 ### MLP
-### MLP with Activation Function
+> [!Important]
+> A multilayer perceptron (MLP) is consisting of  hidden layers between input layer and output layer at perceptron. \
+> And activation function is also applied for nonlinearity.
+
+<figure>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/b22e9cda-ac3c-42c2-b495-14cff3e2563b" alt="drawing" width="500" height="250"/>
+<figcaption>Fig 10. Simple MLP</figcaption>
+</figure>
+
+- Input Layer: 2 features, $(x_1, x_2)$
+- Hidden Layer: 1 hidden layer, its size is 2. 
+- Output Layer: $\hat y$, range 0 ~ 1
+
+### Hidden Layer
+- $h_1$ is a perceptron. Therefore, its equation is same as above perceptron equation.
+  - $\Huge{h_1=\frac{1}{1+e^{-(w_1x_1+w_2x_2+b_1)}}}$
+    
+<figure>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/9448572d-289c-4d76-b126-c28a2a338f5b" alt="drawing" width="400" height="200"/>
+<figcaption>Fig 11. Hidden Layer, $h_1$ </figcaption>
+</figure>
+
+- $h_2$ is a perceptron. Therefore, its equation is same as above perceptron equation.
+  - $\Huge{h_2=\frac{1}{1+e^{-(w_3x_1+w_4x_2+b_2)}}}$
+
+<figure>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/215b9864-8aaf-44ec-ad9b-7d09c10a7cef" alt="drawing" width="400" height="200"/>
+<figcaption>Fig 12. Hidden Layer, $h_2$ </figcaption>
+</figure>
+
+### Output Layer
 
 
 
