@@ -132,7 +132,7 @@
   - $\Huge{h_2=\frac{1}{1+e^{-(w_3x_1+w_4x_2+b_2)}}}$
 
 <figure>
-<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/215b9864-8aaf-44ec-ad9b-7d09c10a7cef" alt="drawing" width="300" height="200"/>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/215b9864-8aaf-44ec-ad9b-7d09c10a7cef" alt="drawing" width="280" height="200"/>
 <figcaption>Fig 12. Hidden Layer, h2 </figcaption>
 </figure>
 
