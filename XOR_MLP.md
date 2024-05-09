@@ -84,7 +84,7 @@
 </figure>
 
 > [!Important]
-> When you apply an activation function into perceptron,  \
+> If you apply an activation function into perceptron,  \
 > the output equation has nonlinearity.
 
 ### Perceptron with Activation Function
@@ -101,7 +101,7 @@
 
 <figure>
 <img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/465aaea2-665b-4f00-b28d-3feea99297bb" alt="drawing"/>
-<figcaption>Fig 9. AND Gate with Sigmoid </figcaption>
+<figcaption>Fig 9. the output plane of AND Gate model with Sigmoid </figcaption>
 </figure>
 
 ## XOR with MLP
@@ -120,7 +120,7 @@
 - Output Layer: $\hat y$, range 0 ~ 1
 
 ### Hidden Layer
-- $h_1$ is a perceptron. Therefore, its equation is same as above perceptron equation.
+- $h_1$ is a perceptron. Therefore, its equation is below:
   - $\Huge{h_1=\frac{1}{1+e^{-(w_1x_1+w_2x_2+b_1)}}}$
     
 <figure>
@@ -128,7 +128,7 @@
 <figcaption>Fig 11. Hidden Layer, h1 </figcaption>
 </figure>
 
-- $h_2$ is a perceptron. Therefore, its equation is same as above perceptron equation.
+- $h_2$ is also a perceptron. Therefore, its equation is below:
   - $\Huge{h_2=\frac{1}{1+e^{-(w_3x_1+w_4x_2+b_2)}}}$
 
 <figure>
@@ -137,6 +137,22 @@
 </figure>
 
 ### Output Layer
+- The final output is also a perceptron with input, $h_1$ and $h_2$.
+  - $\Huge{H=\frac{1}{1+e^{-(w_5h_1+w_6h_2+b_3)}}}$
+  - $\Huge{H=\frac{1}{1+e^{-(w_5\frac{1}{1+e^{-(w_1x_1+w_2x_2+b_1)}}+w_6\frac{1}{1+e^{-(w_3x_1+w_4x_2+b_2)}}+b_3)}}}$   
 
+<figure>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/d1b5eb1b-0235-4768-b703-8b68998cad91" alt="drawing" width="280" height="200"/>
+<figcaption>Fig 13. The final output layer, H </figcaption>
+</figure>
+
+> [!Important]
+> Finally, MLP XOR model makes the output plane curved surface through activation function and multilayer rather than the plane of linear model. \
+> Fig 14. shows curved surface of the output of MLP model.
+
+<figure>
+<img src="https://github.com/jhlee-colab/xor-visualization/assets/158408101/f2d13200-f569-4451-8e45-7c4c3470c9ae" alt="drawing"/>
+<figcaption>Fig 14. The output surface of MLP XOR model</figcaption>
+</figure>
 
 
