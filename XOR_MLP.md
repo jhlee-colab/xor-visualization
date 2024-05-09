@@ -9,7 +9,7 @@
 <figcaption>Fig 1. XOR Gate Diagram</figcaption>
 </figure>
 
-### Truth Table
+### Truth Table for XOR gate
 <table>
 
 <thead>
